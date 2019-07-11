@@ -396,9 +396,7 @@
             </bpws:links>
             <bpws:extensionActivity>
                 <tibex:receiveEvent createInstance="yes"
-                    eventTimeout="60" name="Timer"
-                    tibex:xpdlId="90c919a1-e83c-44ab-a3b2-b778bb2cd5a6"
-                    variable="Timer" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    eventTimeout="60" name="Timer" variable="Timer">
                     <bpws:sources>
                         <bpws:source linkName="TimerToLog"/>
                     </bpws:sources>
@@ -415,7 +413,6 @@
                                     <value
                                     endTime="2019-07-10T15:36:27.087+0100"
                                     intervalUnit="Second"
-                                    runOnce="true"
                                     startTime="2019-07-10T15:36:27.087+0100"
                                     timeInterval="1" xsi:type="generalactivities:Timer"/>
                                 </properties>
@@ -427,7 +424,7 @@
             <bpws:extensionActivity>
                 <tibex:activityExtension inputVariable="Log-input"
                     name="Log"
-                    tibex:xpdlId="1281fae3-76df-44c4-b749-cdaef892fdaf" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                    tibex:xpdlId="af6fe480-3222-48f1-98e9-028ce5476538" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
                     <bpws:targets>
                         <bpws:target linkName="TimerToLog"/>
                     </bpws:targets>
