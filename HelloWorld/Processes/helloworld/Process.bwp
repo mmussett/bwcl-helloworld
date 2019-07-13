@@ -414,7 +414,7 @@
                                     endTime="2019-07-10T15:36:27.087+0100"
                                     intervalUnit="Second"
                                     startTime="2019-07-10T15:36:27.087+0100"
-                                    timeInterval="1" xsi:type="generalactivities:Timer"/>
+                                    timeInterval="10" xsi:type="generalactivities:Timer"/>
                                 </properties>
                             </activityConfig>
                         </bwext:BWActivity>
@@ -422,9 +422,7 @@
                 </tibex:receiveEvent>
             </bpws:extensionActivity>
             <bpws:extensionActivity>
-                <tibex:activityExtension inputVariable="Log-input"
-                    name="Log"
-                    tibex:xpdlId="af6fe480-3222-48f1-98e9-028ce5476538" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                <tibex:activityExtension inputVariable="Log-input" name="Log">
                     <bpws:targets>
                         <bpws:target linkName="TimerToLog"/>
                     </bpws:targets>
