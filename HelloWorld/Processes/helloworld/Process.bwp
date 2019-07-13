@@ -311,8 +311,8 @@
                                     gradientEndColor="50431"
                                     gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
                                     <element href="//0/@process/@activity/@activity/@activities.1"/>
-                                    <layoutConstraint x="177"
-                                    xsi:type="notation:Bounds" y="115"/>
+                                    <layoutConstraint x="207"
+                                    xsi:type="notation:Bounds" y="67"/>
                                     </children>
                                     <styles xsi:type="notation:DrawerStyle"/>
                                     <styles xsi:type="notation:SortingStyle"/>
