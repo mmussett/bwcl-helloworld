@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema elementFormDefault="qualified" targetNamespace="/T1575496084879Converted/JsonSchema" xmlns:tns="/T1575496084879Converted/JsonSchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="AccountInfo" type="tns:AccountInfo"/>
+    <xs:complexType name="AccountInfo">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="account_id" type="xs:integer"/>
+            <xs:element minOccurs="0" name="name" type="xs:string"/>
+            <xs:element minOccurs="0" name="email" type="xs:string"/>
+            <xs:element minOccurs="0" name="type" type="xs:string"/>
+            <xs:element minOccurs="0" name="balance" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
