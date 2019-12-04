@@ -176,6 +176,23 @@
             </complexType>
             <element name="DuplicateKeyException" type="tns:DuplicateKeyExceptionType"/>
         </schema>
+        <xs:schema attributeFormDefault="unqualified"
+            elementFormDefault="qualified"
+            targetNamespace="http://www.tibco.com/pe/WriteToLogActivitySchema"
+            xmlns:tns="http://www.tibco.com/pe/WriteToLogActivitySchema" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+            <xs:complexType name="LogParametersType">
+                <xs:sequence>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="msgCode" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="loggerName" type="xs:string"/>
+                    <xs:element form="unqualified" minOccurs="0"
+                        name="logLevel" type="xs:string"/>
+                    <xs:element form="unqualified" name="message" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+            <xs:element name="ActivityInput" type="tns:LogParametersType"/>
+        </xs:schema>
         <wsdl:definitions
             targetNamespace="http://xmlns.example.com/20190710153552PLT"
             xmlns:extns="/T1575496084879Converted/JsonSchema"
@@ -412,6 +429,62 @@
                                     xsi:type="notation:Bounds" y="10"/>
                                     </children>
 
+                                    <children type="4002 bw.generalactivities.log">
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <children type="4017">
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <layoutConstraint xsi:type="notation:Bounds"/>
+                                    </children>
+
+                                    <styles
+                                    fontName=".AppleSystemUIFont"
+                                    lineColor="0" xsi:type="notation:ShapeStyle"/>
+
+                                    <styles
+                                    backgroundColor="16777215"
+                                    gradientEndColor="50431"
+                                    gradientStartColor="16777215" xsi:type="bwnotation:BackgroundStyle"/>
+
+                                    <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@activities.3"/>
+
+                                    <layoutConstraint
+                                    height="40"
+                                    width="40"
+                                    x="12"
+                                    xsi:type="notation:Bounds" y="28"/>
+                                    </children>
+
                                     <styles xsi:type="notation:DrawerStyle"/>
 
                                     <styles xsi:type="notation:SortingStyle"/>
@@ -591,7 +664,7 @@
         <element href="//0"/>
         <edges
             source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.0/@children.0"
-            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1" type="4006">
             <children type="6002">
                 <layoutConstraint xsi:type="notation:Location" y="40"/>
             </children>
@@ -599,6 +672,17 @@
             <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
             <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.0"/>
             <bendpoints points="[12, 1, -328, 0]$[316, 0, -24, -1]" xsi:type="notation:RelativeBendpoints"/>
+        </edges>
+        <edges
+            source="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.1"
+            target="//@children.0/@children.4/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.2/@children.0/@children.1/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0/@children.0" type="4006">
+            <children type="6002">
+                <layoutConstraint xsi:type="notation:Location" y="40"/>
+            </children>
+            <styles lineColor="0" xsi:type="notation:ConnectorStyle"/>
+            <styles fontName=".AppleSystemUIFont" xsi:type="notation:FontStyle"/>
+            <element href="//0/@process/@activity/@activity/@activities.0/@messages.0/@activity/@activity/@links/@children.1"/>
+            <bendpoints points="[0, 0, 0, 0]$[0, 0, 0, 0]" xsi:type="notation:RelativeBendpoints"/>
         </edges>
     </notation:Diagram>
     <tibex:NamespaceRegistry enabled="true">
@@ -608,6 +692,8 @@
             namespace="www.tibco.com/plugin/java/JavaInvokeActivityInput+5e5a54d4-c800-4b81-8701-4a5bc4a05222+JavaInvokeActivityInput" prefix="tns1"/>
         <tibex:namespaceItem
             namespace="http://xmlns.example.com/20190710153552PLT" prefix="tns2"/>
+        <tibex:namespaceItem
+            namespace="http://www.w3.org/2001/XMLSchema" prefix="xsd"/>
     </tibex:NamespaceRegistry>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="/T1575496084879Converted/JsonSchema"/>
     <bpws:import importType="http://www.w3.org/2001/XMLSchema" namespace="http://tns.tibco.com/bw/REST"/>
@@ -622,6 +708,7 @@
             name="_processContext" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns5:getRequest" name="get" sca-bpel:internal="true"/>
         <bpws:variable messageType="ns5:getResponse" name="getOut-input" sca-bpel:internal="true"/>
+        <bpws:variable element="ns1:ActivityInput" name="Log-input" sca-bpel:internal="true"/>
     </bpws:variables>
     <bpws:extensions>
         <bpws:extension mustUnderstand="no" namespace="http://www.eclipse.org/gmf/runtime/1.0.2/notation"/>
@@ -642,6 +729,7 @@
                         <bpws:flow name="flow1">
                             <bpws:links>
                                 <bpws:link name="OnMessageStartTogetOut" tibex:linkType="SUCCESS"/>
+                                <bpws:link name="LogTogetOut" tibex:linkType="SUCCESS"/>
                             </bpws:links>
                             <bpws:empty name="OnMessageStart"
                                 tibex:constructor="onMessageStart" tibex:xpdlId="3093271f-7085-45cc-a402-ea942530ed37">
@@ -657,14 +745,74 @@
                                 tibex:xpdlId="302e02f7-d123-4fa2-8722-11950297137c" variable="getOut-input">
                                 <tibex:inputBindings>
                                     <tibex:partBinding
-                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://xmlns.example.com/20190710153552PLT&quot; xmlns:tns=&quot;http://xmlns.example.com/Process/parameters&quot; xmlns:tns1=&quot;/T1575496084879Converted/JsonSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;getOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns1:AccountInfo>&#xa;            &lt;tns1:account_id>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns:id&quot;/>&#xa;            &lt;/tns1:account_id>&#xa;            &lt;tns1:name>&#xa;                &lt;xsl:value-of select=&quot;'Mark Mussett'&quot;/>&#xa;            &lt;/tns1:name>&#xa;            &lt;tns1:email>&#xa;                &lt;xsl:value-of select=&quot;'mmussett@tibco.com'&quot;/>&#xa;            &lt;/tns1:email>&#xa;            &lt;tns1:type>&#xa;                &lt;xsl:value-of select=&quot;'current'&quot;/>&#xa;            &lt;/tns1:type>&#xa;            &lt;tns1:balance>&#xa;                &lt;xsl:value-of select=&quot;'9,999,999.99'&quot;/>&#xa;            &lt;/tns1:balance>&#xa;        &lt;/tns1:AccountInfo>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns2=&quot;http://xmlns.example.com/20190710153552PLT&quot; xmlns:tns3=&quot;http://xmlns.example.com/Process/parameters&quot; xmlns:tns4=&quot;/T1575496084879Converted/JsonSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;getOut-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns4:AccountInfo>&#xa;            &lt;tns4:account_id>&#xa;                &lt;xsl:value-of select=&quot;$get.parameters/tns3:id&quot;/>&#xa;            &lt;/tns4:account_id>&#xa;            &lt;tns4:name>&#xa;                &lt;xsl:value-of select=&quot;'Mark Mussett'&quot;/>&#xa;            &lt;/tns4:name>&#xa;            &lt;tns4:email>&#xa;                &lt;xsl:value-of select=&quot;'mmussett@tibco.com'&quot;/>&#xa;            &lt;/tns4:email>&#xa;            &lt;tns4:type>&#xa;                &lt;xsl:value-of select=&quot;'current'&quot;/>&#xa;            &lt;/tns4:type>&#xa;            &lt;tns4:balance>&#xa;                &lt;xsl:value-of select=&quot;'9,999,999.99'&quot;/>&#xa;            &lt;/tns4:balance>&#xa;        &lt;/tns4:AccountInfo>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
                                 </tibex:inputBindings>
                                 <tibex:inputBinding expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
-&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns2="http://xmlns.example.com/20190710153552PLT" xmlns:tns="http://xmlns.example.com/Process/parameters" xmlns:tns1="/T1575496084879Converted/JsonSchema" version="2.0"&gt;&lt;xsl:param name="get"/&gt;&lt;xsl:template name="getOut-input" match="/"&gt;&lt;tns2:getResponse&gt;&lt;item&gt;&lt;tns1:AccountInfo&gt;&lt;tns1:account_id&gt;&lt;xsl:value-of select="$get/parameters/tns:accountGetParameters/tns:id"/&gt;&lt;/tns1:account_id&gt;&lt;tns1:name&gt;&lt;xsl:value-of select="'Mark Mussett'"/&gt;&lt;/tns1:name&gt;&lt;tns1:email&gt;&lt;xsl:value-of select="'mmussett@tibco.com'"/&gt;&lt;/tns1:email&gt;&lt;tns1:type&gt;&lt;xsl:value-of select="'current'"/&gt;&lt;/tns1:type&gt;&lt;tns1:balance&gt;&lt;xsl:value-of select="'9,999,999.99'"/&gt;&lt;/tns1:balance&gt;&lt;/tns1:AccountInfo&gt;&lt;/item&gt;&lt;/tns2:getResponse&gt;&lt;/xsl:template&gt;&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:tns2="http://xmlns.example.com/20190710153552PLT" xmlns:tns3="http://xmlns.example.com/Process/parameters" xmlns:tns4="/T1575496084879Converted/JsonSchema" version="2.0"&gt;
+    &lt;xsl:param name="get"/&gt;
+    &lt;xsl:template name="getOut-input" match="/"&gt;
+        &lt;tns2:getResponse&gt;
+            &lt;item&gt;
+                &lt;tns4:AccountInfo&gt;
+                    &lt;tns4:account_id&gt;
+                        &lt;xsl:value-of select="$get/parameters/tns3:accountGetParameters/tns3:id"/&gt;
+                    &lt;/tns4:account_id&gt;
+                    &lt;tns4:name&gt;
+                        &lt;xsl:value-of select="'Mark Mussett'"/&gt;
+                    &lt;/tns4:name&gt;
+                    &lt;tns4:email&gt;
+                        &lt;xsl:value-of select="'mmussett@tibco.com'"/&gt;
+                    &lt;/tns4:email&gt;
+                    &lt;tns4:type&gt;
+                        &lt;xsl:value-of select="'current'"/&gt;
+                    &lt;/tns4:type&gt;
+                    &lt;tns4:balance&gt;
+                        &lt;xsl:value-of select="'9,999,999.99'"/&gt;
+                    &lt;/tns4:balance&gt;
+                &lt;/tns4:AccountInfo&gt;
+            &lt;/item&gt;
+        &lt;/tns2:getResponse&gt;
+    &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;</tibex:inputBinding>
                                 <bpws:targets>
-                                    <bpws:target linkName="OnMessageStartTogetOut"/>
+                                    <bpws:target linkName="LogTogetOut"/>
                                 </bpws:targets>
                             </bpws:reply>
+                            <bpws:extensionActivity>
+                                <tibex:activityExtension
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns1=&quot;http://xmlns.example.com/Process/parameters&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&lt;xsl:param name=&quot;get&quot;/>&lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&lt;tns:ActivityInput>&lt;message>&lt;xsl:value-of select=&quot;concat('Get Account called for ID ',xsd:string($get/parameters/tns1:accountGetParameters/tns1:id))&quot;/>&lt;/message>&lt;/tns:ActivityInput>&lt;/xsl:template>&lt;/xsl:stylesheet>"
+                                    expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"
+                                    inputVariable="Log-input" name="Log"
+                                    tibex:xpdlId="2fabf28c-7a29-4599-9a3e-49d7f756bc33" xmlns:tibex="http://www.tibco.com/bpel/2007/extensions">
+                                    <bpws:targets>
+                                    <bpws:target linkName="OnMessageStartTogetOut"/>
+                                    </bpws:targets>
+                                    <bpws:sources>
+                                    <bpws:source linkName="LogTogetOut"/>
+                                    </bpws:sources>
+                                    <tibex:inputBindings>
+                                    <tibex:inputBinding
+                                    expression="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xa;&lt;xsl:stylesheet xmlns:xsl=&quot;http://www.w3.org/1999/XSL/Transform&quot; xmlns:tns=&quot;http://www.tibco.com/pe/WriteToLogActivitySchema&quot; xmlns:tns1=&quot;http://xmlns.example.com/Process/parameters&quot; xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; version=&quot;2.0&quot;>&#xa;    &lt;xsl:param name=&quot;get.parameters&quot;/>&#xa;    &lt;xsl:template name=&quot;Log-input&quot; match=&quot;/&quot;>&#xa;        &lt;tns:ActivityInput>&#xa;            &lt;message>&#xa;                &lt;xsl:value-of select=&quot;concat('Get Account called for ID ',xsd:string($get.parameters/tns1:id))&quot;/>&#xa;            &lt;/message>&#xa;        &lt;/tns:ActivityInput>&#xa;    &lt;/xsl:template>&#xa;&lt;/xsl:stylesheet>" expressionLanguage="urn:oasis:names:tc:wsbpel:2.0:sublang:xslt1.0"/>
+                                    </tibex:inputBindings>
+                                    <tibex:config>
+                                    <bwext:BWActivity
+                                    activityTypeID="bw.generalactivities.log"
+                                    version="6.0.0.001"
+                                    xmlns:activityconfig="http://tns.tibco.com/bw/model/activityconfig"
+                                    xmlns:bwext="http://tns.tibco.com/bw/model/core/bwext"
+                                    xmlns:generalactivities="http://ns.tibco.com/bw/palette/generalactivities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+                                    <activityConfig>
+                                    <properties
+                                    name="config" xsi:type="activityconfig:EMFProperty">
+                                    <type href="http://ns.tibco.com/bw/palette/generalactivities#//Log"/>
+                                    <value role="Info"
+                                    suppressJobInfo="true" xsi:type="generalactivities:Log"/>
+                                    </properties>
+                                    </activityConfig>
+                                    </bwext:BWActivity>
+                                    </tibex:config>
+                                </tibex:activityExtension>
+                            </bpws:extensionActivity>
                         </bpws:flow>
                     </bpws:scope>
                 </bpws:onMessage>
