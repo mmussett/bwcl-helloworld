@@ -484,8 +484,8 @@
                                     <layoutConstraint
                                     height="40"
                                     width="40"
-                                    x="111"
-                                    xsi:type="notation:Bounds" y="10"/>
+                                    x="97"
+                                    xsi:type="notation:Bounds" y="19"/>
                                     </children>
 
                                     <styles xsi:type="notation:DrawerStyle"/>
